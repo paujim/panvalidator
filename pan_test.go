@@ -99,7 +99,7 @@ func TestVisaPANs(t *testing.T) {
 }
 
 func TestInvalidPANs(t *testing.T) {
-	invalidPans := []int{9111111111111111}
+	invalidPans := []int{9111111111111111, -4408041234567893, 00000000000000000}
 	for _, pan := range invalidPans {
 		ok, cardType := IsValid(pan)
 		if ok {
